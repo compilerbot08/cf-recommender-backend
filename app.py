@@ -19,8 +19,8 @@ def recommend():
 
     try:
         recommendations_df = recommend_problems(handle)
-        recommendations = recommendations_df.to_dict(orient='records')
-        return jsonify(recommendations)
+        # recommendations = recommendations_df.to_dict(orient='records')
+        return jsonify(recommendations_df)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
